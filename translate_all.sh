@@ -5,7 +5,7 @@ translate_file() {
     local original_file=$1
     local translation_file=$2
     local target_language=$3
-    ./translater.py "$original_file" "$translation_file" --source_language en --target_language "$target_language"
+    "$(dirname $0)"translater.py "$original_file" "$translation_file" --source_language en --target_language "$target_language"
 }
 
 # Check if a directory parameter is provided
