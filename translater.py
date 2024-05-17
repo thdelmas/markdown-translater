@@ -22,7 +22,7 @@ def translate_text(api_key, text, lang_code, target_language):
             {"role": "system", "content": f"You must adapt the text to match the destination language and culture"},
             {"role": "user", "content": text}
         ],
-        max_tokens=1000,
+        max_tokens=4096,
         n=1,
         stop=None,
         temperature=0.5
