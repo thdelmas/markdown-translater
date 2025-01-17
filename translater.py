@@ -15,7 +15,7 @@ def translate_text(api_key, text, lang_code, target_language):
     client = OpenAI(api_key=api_key)
     source_language = languages[lang_code]
     response = client.chat.completions.create(
-        model="gpt-3.5-turbo",
+        model="gpt-4o-mini",
         messages=[
             {"role": "system", "content": f"You are a translator from {source_language} to {target_language}."},
             {"role": "system", "content": f"You must keep the data header, translating the values if necessary"},
